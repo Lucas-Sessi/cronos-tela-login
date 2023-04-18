@@ -8,6 +8,7 @@ import logo from '../assets/logo_cronos.png';
 
 import * as React from 'react';
 import EmailIcon from '@mui/icons-material/Email';
+import LockIcon from '@mui/icons-material/Lock';
 
 const Login = () => {
   return (
@@ -16,17 +17,21 @@ const Login = () => {
         <img src={logo} alt="logoCronos" className='logoCronos'/>
       </div>
       <form action="">
-        <div className="containerInput">
+        
           <label htmlFor="email">Email
-            <EmailIcon />
-            <input type="email" name='email' id='email' placeholder='example@gmail.com' required/>
+            <div className="containerInput">
+              <EmailIcon className='iconInput' />
+              <input type="email" name='email' id='email' placeholder='|  example@gmail.com' required/>
+            </div>
           </label>
-        </div>
-        <div className="containerInput">
+        
           <label htmlFor="password">Password
-            <input type="password" name="password" id="password" placeholder='*******' required/>
+            <div className="containerInput">
+            <LockIcon className='iconInput' />
+              <input type="password" name="password" id="password" placeholder='|  *******' required/>
+            </div>
           </label>
-        </div>
+        
         <div className='ForgetPassword'>
           <a href="/forgetpassword">Forget Password?</a>
         </div>
